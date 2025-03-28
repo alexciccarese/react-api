@@ -20,6 +20,10 @@ export default function App() {
       })
   }
 
+  const handleDeletePost = (slug) => {
+    setPosts(posts.filter(post => post.slug !== slug))
+  }
+
   return (
     <>
 
@@ -33,6 +37,7 @@ export default function App() {
               {posts.map(post => (
                 <div className="col" key={`post-${post.slug}`}>
                   <div className="card border-0">
+                    <button onClick={() => handleDeletePost(post.slug)} className="btn btn-danger"><i className="bi bi-trash"></i></button>
                     <img className="card-img-top" src={api_url + post.image} alt={post.title} />
                     <div className="card-body">
                       {post.title}

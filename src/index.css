@@ -1,4 +1,5 @@
 @import 'bootstrap';
+@import 'bootstrap-icons';
 
 body
 {
@@ -14,4 +15,11 @@ body
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.btn {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  box-shadow: 0px 4px 6px 4px rgba(255, 255, 255, 0.3);
 }
