@@ -32,8 +32,8 @@ export default function App() {
 
               {posts.map(post => (
                 <div className="col" key={`post-${post.slug}`}>
-                  <div className="card">
-                    <img className="card-img-top" src={post.image} alt={post.title} />
+                  <div className="card border-0">
+                    <img className="card-img-top" src={api_url + post.image} alt={post.title} />
                     <div className="card-body">
                       {post.title}
                     </div>
